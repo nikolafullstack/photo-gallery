@@ -2,16 +2,19 @@
   max-width: 1040px;
   margin: 0 auto;
   padding-bottom: 100px;
-  .app-flow__title {
+
+  &__title {
     font-weight: bold;
     font-size: 24px;
     margin-top: 23px;
     margin-bottom: 7px;
   }
-  .app-flow__description {
+
+  &__description {
     color: #656974;
     line-height: 23px;
-    .app-flow__description__tag {
+
+    &__tag {
       display: inline-block;
       background-color: rgba(86, 86, 86, 0.1);
       border-radius: 6px;
@@ -21,46 +24,54 @@
       padding: 2px 6px;
     }
   }
-  .app-flow__grid {
+
+  &__grid {
     margin-top: 22px;
-    .app-flow__grid__masonry {
+
+    &__masonry {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       margin-left: -30px;
       width: auto;
     }
-    .app-flow__grid__masonry_column {
+
+    &__masonry_column {
       padding-left: 30px;
       background-clip: padding-box;
     }
-    .app-flow__grid__column__item {
+
+    &__column__item {
       margin-bottom: 16px;
       background-color: #F5F6F7;
       border-radius: 10px;
       width: 100%;
+
       img {
         width: 100%;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
       }
-      .app-flow__grid__column__item__info {
+
+      &__info {
         padding: 8px 10px 8px 16px;
         max-width: 100%;
-        .app-flow__grid__column__item__info__name {
+
+        &__name {
           font-weight: 500;
           font-size: 15px;
           color: #000;
           margin-bottom: 8px;
         }
-        .app-flow__grid__column__item__info__author {
+
+        &__author {
           display: flex;
           justify-content: space-between;
           align-items: center;
           font-size: 14px;
           line-height: 23px;
           
-          .app-flow__grid__column__item__info__author__name-avatar {
+          &__name-avatar {
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -81,7 +92,8 @@
               padding-right: 5px;
             }
           }
-          .app-flow__grid__column__item__info__author__activity {
+
+          &__activity {
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -93,7 +105,9 @@
             svg {
               font-size: 11px;
             }
-            .app-flow__grid__column__item__info__author__activity__heart, .app-flow__grid__column__item__info__author__activity__comments {
+
+            &__heart,
+            &__comments {
               display: flex;
               justify-content: flex-end;
               align-items: center;
@@ -103,7 +117,8 @@
                 margin-right: 2px;
               }
             }
-            .app-flow__grid__column__item__info__author__activity__heart {
+
+            &__heart {
               &:hover {
                 color: #000;
                 svg {
@@ -111,7 +126,8 @@
                 }
               }
             }
-            .app-flow__grid__column__item__info__author__activity__comments {
+
+            &__comments {
               &:hover {
                 color: #000;
                 svg {
@@ -123,17 +139,21 @@
         }
       }
     }
+
     @media screen and (max-width: 1040px) {
       grid-template-columns: 1fr 1fr 1fr;
     }
+
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr 1fr;
     }
+
     @media screen and (max-width: 500px) {
       grid-template-columns: 1fr;
     }
   }
-  .app-flow__load-more {
+
+  &__load-more {
     width: 150px;
     border: none;
     display: block;
@@ -153,6 +173,7 @@
       opacity: 0.6;
     }
   }
+
   @media screen and (max-width: 1040px) {
     padding: 0 20px 80px 20px;
   }

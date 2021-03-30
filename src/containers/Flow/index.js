@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Masonry from 'react-masonry-css';
 
-import flowActions from 'redux/flow/actions';
-import * as flowSelectors from 'redux/flow/selectors';
+import flowActions from 'redux/list/actions';
+import * as flowSelectors from 'redux/list/selectors';
 import FlowItem from './FlowItem';
 
 function Flow() {
