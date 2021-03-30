@@ -1,0 +1,72 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 25px;
+  color: #A2A5AE;
+  .app-header__back {
+    cursor: pointer;
+    color: #4A00CD;
+  }
+  .app-header__select {
+    width: 200px;
+    @media screen and (max-width: 500px) {
+      margin: 20px 0;
+    }
+  }
+  .app-header__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .app-header__options__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-header__options__upload {
+      margin: 0 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      @media screen and (max-width: 1040px) {
+        margin: 0 8px;
+      }
+    }
+    .app-header__options__users {
+      margin-left: 36px;
+      margin-right: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin-right: 8px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      @media screen and (max-width: 1040px) {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
+    .app-header__options__add-user, .app-header__options__menu, .app-header__options__filter {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .app-header__options__filter {
+      margin-left: 10px;
+    }
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 1040px) {
+    padding: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+}
