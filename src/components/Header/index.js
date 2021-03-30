@@ -9,18 +9,7 @@ import * as flowSelectors from 'redux/list/selectors';
 import User1Img from 'assets/images/user1.png';
 import User2Img from 'assets/images/user2.png';
 import User3Img from 'assets/images/user3.png';
-
-const options = [
-  { value: 'concrete', label: 'Concrete' },
-  { value: 'wooden', label: 'Wooden' },
-  { value: 'steel', label: 'Steel' },
-  { value: 'soft', label: 'Soft' },
-  { value: 'frozen', label: 'Frozen' },
-  { value: 'rubber', label: 'Rubber' },
-  { value: 'fresh', label: 'Fresh' },
-  { value: 'metal', label: 'Metal' },
-  { value: 'granite', label: 'Granite' },
-]
+import { CATEGORY_FILTERS } from 'constants/pages';
 
 function Header() {
   const dispatch = useDispatch();
@@ -39,7 +28,7 @@ function Header() {
       </div>
       <div className="app-header__options">
         <Select
-          options={options}
+          options={CATEGORY_FILTERS}
           className="app-header__select"
           placeholder="Category..."
           onChange={changeCategory}

@@ -5,6 +5,7 @@ import Masonry from 'react-masonry-css';
 import flowActions from 'redux/list/actions';
 import * as flowSelectors from 'redux/list/selectors';
 import FlowItem from './FlowItem';
+import { BREAKPOINT_COLUMNS } from 'constants/pages';
 
 function Flow() {
 
@@ -14,13 +15,6 @@ function Flow() {
   const loading = useSelector(flowSelectors.selectLoading);
   const itemsPerPage = useSelector(flowSelectors.selectItemsPerPage);
   const category = useSelector(flowSelectors.selectCategory);
-
-  const breakpointColumnsObj = {
-    default: 4,
-    1040: 3,
-    768: 2,
-    500: 1
-  };
 
   const setPage = (pageToLoad) => {
     dispatch(flowActions.setPage(pageToLoad));
@@ -45,7 +39,7 @@ function Flow() {
       </div>
       <div className="app-flow__grid">
         <Masonry
-          breakpointCols={breakpointColumnsObj}
+          breakpointCols={BREAKPOINT_COLUMNS}
           className="app-flow__grid__masonry"
           columnClassName="app-flow__grid__masonry_column"
         >

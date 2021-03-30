@@ -7,13 +7,13 @@ function Footer() {
     <div className="app-footer">
       <div className="app-footer__controls">
         <div className="app-footer__controls__search">
-          <Search />
+          <Search fontSize="small" />
         </div>
         <div className="app-footer__controls__dashboard">
-          <Dashboard />
+          <Dashboard fontSize="small" />
         </div>
         <div className="app-footer__controls__notifications">
-          <Notifications />
+          <Notifications fontSize="small" />
           <span>1</span>
         </div>
       </div>
