@@ -3,8 +3,8 @@ import Select from 'react-select';
 import { useDispatch, useSelector } from 'react-redux';
 import { ArrowBackIos, FilterList, MoreHoriz, Publish, PersonAddRounded } from '@material-ui/icons';
 
-import flowActions from 'redux/list/actions';
-import * as flowSelectors from 'redux/list/selectors';
+import flowActions from 'redux/flow/actions';
+import * as flowSelectors from 'redux/flow/selectors';
 
 import User1Img from 'assets/images/user1.png';
 import User2Img from 'assets/images/user2.png';

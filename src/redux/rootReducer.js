@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import flowReducers from './list/reducers';
+import flowReducers from './flow/reducers';
 
 const rootReducer = combineReducers({
   flow: flowReducers,
