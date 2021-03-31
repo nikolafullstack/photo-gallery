@@ -3,18 +3,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import Masonry from 'react-masonry-css';
 
 import flowActions from 'redux/flow/actions';
-import * as flowSelectors from 'redux/flow/selectors';
 import FlowItem from './FlowItem';
 import { BREAKPOINT_COLUMNS } from 'constants/pages';
 
 function Flow() {
 
   const dispatch = useDispatch();
-  const flow = useSelector(flowSelectors.selectFlow);
-  const page = useSelector(flowSelectors.selectPage);
-  const loading = useSelector(flowSelectors.selectLoading);
-  const itemsPerPage = useSelector(flowSelectors.selectItemsPerPage);
-  const category = useSelector(flowSelectors.selectCategory);
+  const {
+    flow,
+    page,
+    loading,
+    itemsPerPage,
+    category
+  } = useSelector((state) => state.flow);
 
   const setPage = (pageToLoad) => {
     dispatch(flowActions.setPage(pageToLoad));
@@ -22,7 +23,7 @@ function Flow() {
 
   useEffect(() => {
     dispatch(flowActions.getFlow(page, itemsPerPage, category));
-  }, [page]);
+  }, [page, category, itemsPerPage]);
 
   return (
     <div className="app-flow">

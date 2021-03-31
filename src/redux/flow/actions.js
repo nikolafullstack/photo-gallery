@@ -10,6 +10,7 @@ const flowActions = createActions(
     SET_LOADING: undefined,
     SET_ERROR: undefined,
     SET_FLOW: undefined,
+    UPDATE_FLOW: undefined,
     SET_FLOW_BY_CATEGORY: undefined,
     SET_PAGE: undefined,
     SET_CATEGORY: undefined,
@@ -25,7 +26,13 @@ const getFlow = (page, itemsPerPage, category) => async (dispatch) => {
       limit: itemsPerPage,
       category,
     });
-    dispatch(flowActions.setFlow(data.data || []));
+
+    if (page === 1) {
+      dispatch(flowActions.setFlow(data.data || []));  
+    } else {
+      dispatch(flowActions.updateFlow(data.data || []));
+    }
+
     dispatch(flowActions.setLoading(false));
   } catch (error) {
     dispatch(flowActions.setError(error));

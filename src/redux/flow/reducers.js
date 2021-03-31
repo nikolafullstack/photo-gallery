@@ -35,6 +35,13 @@ export const flowReducers = handleActions(
       flowActions.setFlow,
       (state, action) => ({
         ...state,
+        flow: [...action.payload],
+      })
+    ],
+    [
+      flowActions.updateFlow,
+      (state, action) => ({
+        ...state,
         flow: [...state.flow, ...action.payload],
       })
     ],
